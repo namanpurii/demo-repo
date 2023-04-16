@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example HTML Website</title>
+</head>
+<body>
+    <div class="top-container">
+        <h1>My Website</h1>
+        <ul>
+            <li><a href="#" class="footer-link">Home</a></li>
+            <li><a href="C:\Users\NAMAN PURI\Desktop\CSS-Personal Site\index.html" class="footer-link">About</a></li>
+            <li><a href="mailto:puri2001naman@gmail.com" class="footer-link">Contact</a></li>
+        </ul>
+    </div>
+    <div class="middle-container">
+        <h2>Welcome to my Website</h2>
+        <p>This is a simple website</p>
+        <button onclick="addCSS()" id="button" class="btn">Toggle CSS</button>
+    </div>
+    <div class="bottom-container">
+        <p>Copyright © Naman Puri.</p>
+    </div>
+    <script>
+        let counter = 1
+        function addCSS()
+        {
+            counter++
+            if(counter%2==0)
+                document.getElementById("head").innerHTML = '<title>Example HTML Website</title> \n <link rel="stylesheet" href="./styles.css">';
+            else
+                document.getElementById("head").innerHTML = '<title>Example HTML Website</title>'; 
+        }
+    </script>
+</body>
+</html>
